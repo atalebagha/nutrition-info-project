@@ -71,7 +71,7 @@ const Table = (props: TableProps): CElement<TableProps, any> => {
   },
   useSortBy,
   useRowSelect,
-  hooks => {
+  (hooks: any) => {
     R.hasPath(['visibleColumns'], hooks) && hooks.visibleColumns.push((columns: any[]) => [
       {
         id: 'id',
