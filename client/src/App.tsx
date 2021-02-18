@@ -10,21 +10,21 @@ const client = new ApolloClient({
 });
 
 function App() {
-	const [addDessert, setAddDesert] = React.useState(false);
+  const [addDessert, setAddDesert] = React.useState(false);
   return (
-		<ApolloProvider client={client}>
-			<div className="mw9 center ph3-ns">
-				<div className="ph2-ns">
-					<div className="fl wl-100 pa2">
-							{
-								addDessert ?
-									<AddDessert onClose={() => setAddDesert(false)}/> :
-									<DessertList addDessert={() => setAddDesert(true)} rowsSelected={1} />
-							}
-					</div>
-				</div>
-			</div>
-		</ApolloProvider>
+    <ApolloProvider client={client}>
+      <div className="mw9 center ph3-ns">
+        <div className="ph2-ns">
+          <div className="fl wl-100 pa2">
+              {
+                addDessert ?
+                  <AddDessert onClose={() => setAddDesert(false)}/> :
+                  <DessertList addDessert={() => setAddDesert(true)} rowsSelected={1} />
+              }
+          </div>
+        </div>
+      </div>
+    </ApolloProvider>
   );
 }
 
